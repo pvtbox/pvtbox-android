@@ -1,0 +1,51 @@
+.idea
+.gradle
+/local.properties
+.DS_Store
+/build
+.externalNativeBuild
+app.iml
+app/libs/
+Pvtbox.iml
+app/app.iml
+key_store
+app/libs/pvtboxpatch*
+.gradle/*/taskArtifacts
+.gradle/*/taskArtifacts
+.gradle/*/taskArtifacts
+.idea/workspace.xml
+###########################
+########## IDEA ###########
+###########################
+
+
+###########################
+###### Android Studio #####
+###########################
+
+
+###########################
+########## Java ###########
+###########################
+.classpath
+.project
+
+
+###########################
+######### Gradle ##########
+###########################
+
+local.properties
+
+###########################
+######### Fabric ##########
+###########################
+fabric.properties
+*fabric*.txt
+
+###########################
+########## Other ##########
+###########################
+docs
+*.sh
+paperwork.json

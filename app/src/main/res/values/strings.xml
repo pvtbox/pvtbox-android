@@ -1,0 +1,474 @@
+<!--
+  
+  Pvtbox. Fast and secure file transfer & sync directly across your devices. 
+  Copyright © 2020  Pb Private Cloud Solutions Ltd. 
+  
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+     http://www.apache.org/licenses/LICENSE-2.0
+  
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  
+-->
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Pvtbox</string>
+    <string name="service_description">Pvtbox Service</string>
+
+    <string name="app_syncing">Pvtbox is syncing…</string>
+    <string name="app_synced">Pvtbox is synced</string>
+    <string name="app_paused">Pvtbox is paused…</string>
+    <string name="app_connecting">Pvtbox is connecting to servers…</string>
+    <string name="app_is_free">Pvtbox license is Free…</string>
+    <string name="app_sync_disabled">Syncing across devices disabled</string>
+    <string name="app_upgrade_license">Please upgrade your license.</string>
+    <string name="tap_to_open">Tap to open</string>
+    <string name="self">%s (You)</string>
+
+    <string name="password_must_equals">Password not equals with confirmation</string>
+    <string name="wrong_email_format">Wrong email format</string>
+    <string name="empty_password">Password can not be empty</string>
+    <string name="empty_host">Self-hosted server address can\'t be empty</string>
+    <string name="write_and_read_ext_storage">Please provide permission to access device storage.\nApplication won\'t work without it.</string>
+    <string name="open_drawer">open drawer</string>
+    <string name="close_drawer">close drawer</string>
+    <string name="ago">ago</string>
+    <string name="year">years</string>
+    <string name="years">years</string>
+    <string name="month">month</string>
+    <string name="months">months</string>
+    <string name="day">day</string>
+    <string name="days">days</string>
+    <string name="hour">hour</string>
+    <string name="hours">hours</string>
+    <string name="minute">minute</string>
+    <string name="minutes">minutes</string>
+    <string name="new_folder">New folder</string>
+    <string name="add_photo_video">Add Photo</string>
+    <string name="take_photo">Take Photo</string>
+    <string name="add_files">Add Files</string>
+    <string name="send_file">Send File</string>
+    <string name="properties">Properties</string>
+    <string name="delete">Delete</string>
+    <string name="copy">Copy</string>
+    <string name="move">Move</string>
+    <string name="rename">Rename</string>
+    <string name="crete_offline_copy">Create offline copy</string>
+    <string name="open_with">Redirect to…</string>
+    <string name="share">Share</string>
+    <string name="collaboration_settings">Collaboration Settings</string>
+    <string name="quit_collaboration">Quit collaboration</string>
+    <string name="remove_user">Remove user</string>
+    <string name="get_link">Get link</string>
+    <string name="current_devices">Current Devices: %d/%d</string>
+    <string name="space_in_use">In use:</string>
+    <string name="synced_status">Synced</string>
+    <string name="syncing_status">Syncing</string>
+    <string name="wiped_status">Wiped</string>
+    <string name="power_off_status">PowerOff</string>
+    <string name="paused_status">Paused</string>
+    <string name="indexing_status">Indexing</string>
+    <string name="logged_out_status">Logged out</string>
+    <string name="connecting_status">Connecting</string>
+    <string name="mb_in_s">MB/s</string>
+    <string name="kb_in_s">KB/s</string>
+    <string name="Gb_in_s">GB/s</string>
+    <string name="b">B</string>
+    <string name="kb">KB</string>
+    <string name="mb">MB</string>
+    <string name="gb">GB</string>
+    <string name="tb">TB</string>
+    <string name="action_sort_alphabetically">Sort by A-b-c</string>
+    <string name="action_sort_descending_date">Sort by date</string>
+    <string name="select_all">Select all</string>
+    <string name="cancel_selection">Cancel selection</string>
+    <string name="download_to">Save to Downloads</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="image_viewer_size">Size:</string>
+    <string name="image_viewer_type">Type:</string>
+    <string name="image_viewer_files">Files:</string>
+    <string name="image_viewer_permission">Permission:</string>
+    <string name="image_viewer_added">Added:</string>
+    <string name="image_viewer_modified">Modified:</string>
+    <string name="recently_added">Recently added</string>
+    <string name="recently_modified">Recently modified</string>
+    <string name="image_viewer_path">Path:</string>
+    <string name="account_type">Account type:</string>
+    <string name="update_to_pro">Update to PRO</string>
+    <string name="automatic_upload" formatted="false">Automatically add\u0020</string>
+    <string name="photos_from_camera" formatted="false">photos and videos from camera</string>
+    <string name="protect_your_privacy">Protect your privacy\u0020</string>
+    <string name="with_passcode">with passcode</string>
+    <string name="wifi_only">Update data via wifi only</string>
+    <string name="wifi_and_cellular">Update data via Wi-Fi and cellular</string>
+    <string name="logout">LOGOUT</string>
+    <string name="logout_node">Log out</string>
+    <string name="logout_node_in_progress">Log out in progress…</string>
+    <string name="logout_and_wipe_node">Log out and wipe</string>
+    <string name="logout_and_wipe_node_in_progress">Wipe in progress…</string>
+    <string name="enter_colleague_email"><i>Colleague email</i></string>
+    <string name="send">Send</string>
+    <string name="get_link_set_date">Set expiry date</string>
+    <string name="get_link_set_password">Set password</string>
+    <string name="create_link">CREATE LINK</string>
+    <string name="remove">Remove</string>
+    <string name="colleagues_list">Colleagues list</string>
+    <string name="add_colleague">Add colleague</string>
+    <string name="can_view">Can view</string>
+    <string name="can_edit">Can edit</string>
+    <string name="status">Status:\u0020</string>
+    <string name="can">Can</string>
+    <string name="owner">Owner</string>
+    <string name="loading"><i>Loading…</i></string>
+    <string name="title_settings">Settings</string>
+    <string name="title_my_devices">My Devices</string>
+    <string name="title_get_link">Get link</string>
+    <string name="title_support">Contact us</string>
+    <string name="enter_password">Enter password:</string>
+    <string name="enter_new_name">Please, enter new name</string>
+    <string name="enter_new_folder_name">Please, enter name of new folder</string>
+    <string name="yes">Yes</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="sign_up">Sign up for free</string>
+    <string name="all_files">All Files</string>
+    <string name="recent_files">Recent files</string>
+    <string name="offline_file">Offline files</string>
+    <string name="downloads">Downloads</string>
+    <string name="my_devices">My devices</string>
+    <string name="faq">FAQ</string>
+    <string name="support">Contact us</string>
+    <string name="welcome_to_pb">Welcome.\nTo add files into your Pvtbox secured sync folder on this device, tap \"+\" icon located in the lower right corner.</string>
+    <string name="nothing_find">Nothing found.</string>
+    <string name="free_licence_trial">Free 14-days trial</string>
+    <string name="free_licence">Free</string>
+    <string name="pro_licence">Pro account</string>
+    <string name="business_licence">Business account</string>
+    <string name="business_admin_licence">Business (Admin) account</string>
+    <string name="unknown_license">Unknown license</string>
+
+
+    <string name="automatic_camera_update_text">All nodes offline.\n Your gallery will be synced when there is at least one online node</string>
+    <string name="Added">Added</string>
+    <string name="Modified">Modified</string>
+    <string name="select">Selected: %d</string>
+    <string name="action_select">Select</string>
+    <string name="password_length_error">Password length must be at least 6 character</string>
+    <string name="password_invalid_symbols_error">For the password you can use only letters of the Latin alphabet, digits and symbols !@#$%^&#38;*()_+-=[]{};:"'\|?/.,&#60;&#62;</string>
+    <string name="network_error">Network error, please try again later</string>
+    <string name="download_network_error">Network error, will try to download later</string>
+    <string name="text_policy_confirm">I have read and accept\u0020</string>
+    <string name="please_confirm_rule_and_policy">Please confirm Rules and Privacy Policy</string>
+    <string name="rules">Rules</string>
+    <string name="and">\u0020and\u0020</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="clear_file">Keep local files on device?</string>
+    <string name="keep">Keep</string>
+    <string name="clear_all">Clear all</string>
+    <string name="empty_folder">Empty folder</string>
+    <string name="can_not_copy_folder_to_self">You can\'t copy folder \"%s\" to itself</string>
+    <string name="can_not_move_folder_to_self">You can\'t move folder \"%s\" to itself</string>
+    <string name="can_not_move_folder_in_same_folder">You can\'t move folder \"%s\" to same location</string>
+    <string name="can_not_move_file_in_same_folder">You can\'t move file \"%s\" to same location</string>
+    <string name="file_with_name_already_exist">File with name \"%s\" already exist</string>
+    <string name="folder_with_name_already_exist">Folder with name \"%s\" already exist</string>
+    <string name="this_file_not_actual_do_want_download_new">The current file is not up-to-date.\nAll changes you made won\'t be synced!\n\nDo you want to download a new version?</string>
+    <string name="download">Download</string>
+    <string name="open">Open</string>
+    <string name="camera_folder_deleted_title">Camera folder was deleted</string>
+    <string name="camera_folder_deleted_message">Camera import cancelled.\nYou can switch \"Automatically add photos and videos from camera\" in Settings to continue syncing your camera with other devices</string>
+    <string name="do_you_want_delete_folder_private_box">Pvtbox folder found on your device.</string>
+    <string name="add_sync">Add files to sync</string>
+    <string name="delete_folder">Delete folder</string>
+    <string name="remind_password">Remind Password</string>
+    <string name="i_all_ready_have_pb">I already have a Pvtbox account</string>
+    <string name="i_do_not_have_pb">I don\'t have a Pvtbox account</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="re_type_password">Re-type Password</string>
+    <string name="please_wait">Please wait</string>
+    <string name="you_can_not_download_file_in_pb_directory">You can\'t download file into Pvtbox secured sync folder</string>
+    <string name="disk_space_error">Not enough disk space! Sync and downloads may not work!</string>
+    <string name="create_firstly">You should create link firstly</string>
+    <string name="error_offline_inappropriate">No appropriate offline state to change</string>
+
+
+    <!-- Operations progress -->
+
+    <string name="start_import_camera" formatted="false">Importing camera…</string>
+    <string name="progress_import_camera">Importing camera…\n%d of %d files total</string>
+    <string name="imported_camera" formatted="false">Successfully imported camera</string>
+    <string name="cancel_import_camera" formatted="false">Camera import cancelled</string>
+
+    <string name="progress_rename_folder" formatted="false">Renaming folder…</string>
+    <string name="progress_rename_file" formatted="false">Renaming file…</string>
+    <string name="renamed_successfully">Renamed successfully</string>
+
+    <string name="progress_delete_multi">Deleting objects…\n%d of %d total</string>
+    <string name="progress_delete_folder" formatted="false">Deleting folder…</string>
+    <string name="progress_delete_file" formatted="false">Deleting file…</string>
+    <string name="delete_successfully">Deleted successfully</string>
+
+    <string name="progress_copy_multi">Copying objects…\n%d of %d total</string>
+    <string name="progress_copy_folder" formatted="false">Copying folder…</string>
+    <string name="progress_copy_file" formatted="false">Copying file…</string>
+    <string name="copied_successfully">Copied successfully</string>
+
+    <string name="progress_move_multi">Moving objects…\n%d of %d total</string>
+    <string name="progress_move_folder" formatted="false">Moving folder…</string>
+    <string name="progress_move_file" formatted="false">Moving file…</string>
+    <string name="moved_successfully">Moved successfully</string>
+
+    <string name="progress_add_offline_multi">Adding objects to offline…\n%d of %d total</string>
+    <string name="progress_add_offline_folder" formatted="false">Adding folder to offline…</string>
+    <string name="progress_add_offline_file" formatted="false">Adding file to offline…</string>
+    <string name="added_offline_successfully">Added to offline successfully</string>
+
+    <string name="progress_remove_offline_multi">Removing objects from offline…\n%d of %d total</string>
+    <string name="progress_remove_offline_folder" formatted="false">Removing folder from offline…</string>
+    <string name="progress_remove_offline_file" formatted="false">Removing file from offline…</string>
+    <string name="removed_offline_successfully">Removed from offline successfully</string>
+
+    <string name="progress_cancel_download">Cancelling download…</string>
+    <string name="progress_cancel_downloads">Cancelling downloads…</string>
+    <string name="cancelled_download_successfully">Cancelled download successfully</string>
+    <string name="cancelled_downloads_successfully">Cancelled downloads successfully</string>
+
+    <string name="progress_add_file">Adding file to device\'s secured sync folder…</string>
+    <string name="added_file_successfully">Added successfully</string>
+    <string name="progress_add_file_multi">Adding files to device\'s secured sync folder…\n%d of %d total</string>
+
+    <string name="progress_add_folder">Creating folder…</string>
+    <string name="added_folder_successfully">Folder created successfully</string>
+
+    <string name="performing_operation">Performing operation…</string>
+
+    <string name="http_download_progress">Downloading file \"%s\"…\n%d%% of %s %s</string>
+    <string name="http_download_cancel">Download cancelled by remote action</string>
+    <string name="file_downloaded_successfully">File \"%s\" downloaded successfully"</string>
+
+    <string name="share_download_started" formatted="false">Starting share download…</string>
+    <string name="share_downloading">Downloading share\n%d files total…</string>
+    <string name="processing_share">Processing share…</string>
+    <string name="share_download_progress">Downloading shared file\n\"%s\"…\n%d%% of %s, %d files total</string>
+    <string name="share_downloaded_successfully" formatted="false">Share downloaded successfully</string>
+    <string name="share_download_cancelled" formatted="false">Share download cancelled</string>
+    <string name="share_download_unavailable">Share unavailable.\nPerhaps access was closed or expired.</string>
+
+    <string name="create_link_progress" formatted="false">Creating link…</string>
+    <string name="link_created_successfully">Link created successfully</string>
+    <string name="create_link_progress_multi" formatted="false">Creating links…\n%d of %d total</string>
+    <string name="links_created_successfully" formatted="false">Links created successfully</string>
+    <string name="share_update_progress" formatted="false">Updating…</string>
+    <string name="share_updated_successfully" formatted="false">Updated successfully</string>
+    <string name="share_cancel_progress" formatted="false">Cancelling share…</string>
+    <string name="share_cancelled_successfully" formatted="false">Cancelled share successfully</string>
+    <string name="link_copied_successfully">The link was copied to the clipboard</string>
+
+    <string name="operation_error">Operation error\n%s</string>
+
+    <string name="add_collaboration_progress">Adding colleague to collaboration…</string>
+    <string name="add_collaboration_successfully">Added colleague to collaboration successfully</string>
+    <string name="quit_collaboration_progress">Quitting collaboration…</string>
+    <string name="quit_collaboration_successfully">Quit collaboration successfully</string>
+    <string name="delete_user_progress">Deleting colleague from collaboration…</string>
+    <string name="delete_user_successfully">Deleted colleague from collaboration successfully</string>
+    <string name="update_permission_progress">Updating colleague permissions…</string>
+    <string name="update_permission_successfully">Updated colleague permissions successfully</string>
+    <string name="collaboration_remove_user_message">Colleague %s will be removed from collaboration. Collaboration folder will be deleted from colleague Pvtbox secured sync folders on all nodes.</string>
+    <string name="collaboration_leave_message">Collaboration folder will be deleted from Pvtbox secured sync folders on all your nodes.</string>
+    <string name="collaboration_cancel_message">Collaboration will be cancelled, collaboration folder will be deleted from all colleagues Pvtbox secured sync folders on all nodes.</string>
+
+    <string name="enter_message_for_support">Please select subject and enter your message to support below</string>
+    <string name="message_empty">Message can\'t be empty. Please enter your message</string>
+    <string name="send_message_to_support_progress">Sending message to support…</string>
+    <string name="send_message_to_support_successfully">Sent message to support successfully</string>
+
+    <string name="action_disabled_while_another_acton_performing">Action disabled while another action performing</string>
+    <string name="nothing_selected">Nothing selected, operation disabled</string>
+    <string name="wait_while_downloading">Wait while file downloading please</string>
+    <string name="download_firstly">Click on file to download it firstly</string>
+    <string name="empty_name_error">Name can not be empty</string>
+
+    <string name="can_not_import_file">Can\'t import file "%s"\n%s</string>
+    <string name="file_does_not_exist">selected file does not exist</string>
+    <string name="unsupported_file">selected unsupported file</string>
+    <string name="unsupported_action">Unsupported action</string>
+
+    <string name="don_t_have_app_for_open_this_file">don\'t have app for open this file</string>
+
+    <string name="android">Android</string>
+
+    <string name="file_date_and_size">%s\n%s</string>
+    <string name="file_size">%s %s/%s %s</string>
+    <string name="file_count_format">%d (%d offline)</string>
+    <string name="folder_date_and_size">%s\n%s; %d files</string>
+    <string name="folder_size">%s %s</string>
+    <string name="date_format">%s %d %s %s</string>
+    <string name="more_menu">More…</string>
+    <string name="can_permission_error_self">Can\'t remove permission from yourself, you quit collaboration instead</string>
+    <string name="can_view_permission_error_other">Can\'t remove view permission from user, delete user instead</string>
+    <string name="only_root_can_collaborate">Only root folders can be collaborated</string>
+    <string name="connecting_to_server">Connecting</string>
+    <string name="downloading">Downloading…</string>
+    <string name="starting_download">Starting download…</string>
+    <string name="finishing_download">Finishing download…</string>
+    <string name="waitingInitialSync">Waiting initial sync…</string>
+    <string name="waiting_other_downloads">Waiting other downloads to finish…</string>
+    <string name="waiting_for_nodes">Waiting for nodes…</string>
+    <string name="processing_download">Processing…</string>
+    <string name="expire_title">Expire:</string>
+    <string name="expire_instantly">instantly after download</string>
+    <string name="expire_1day">after 1 day</string>
+    <string name="expire_3days">after 3 days</string>
+    <string name="logged_out_by_action">Logged out by remote action</string>
+    <string name="do_you_want_to_del">Do you want to delete %s from all your devices?</string>
+    <string name="selected_items">\n%d selected items</string>
+    <string name="folder_with_name">folder\n\"%s\"</string>
+    <string name="file_with_name">file\n\"%s\"</string>
+    <string name="enable_roaming">Enable cellular roaming</string>
+    <string name="connect_info">connect information</string>
+
+    <string name="connecting_info">Connecting to signal server…</string>
+    <string name="connectivity_problem">Connectivity problem</string>
+    <string name="check_internet_connection">Please check your internet connection</string>
+    <string name="wait_while_connecting">Please wait while Pvtbox connecting to signal server</string>
+    <string name="connectivity_problem_cellular">Can\'t connect because wifi unavailable and cellular network restricted.\nYou can switch off cellular restriction in Settings by enabling \"Update data via Wi-Fi and cellular\".</string>
+    <string name="connectivity_problem_roaming">Can\'t connect because wifi unavailable and cellular network restricted in roaming.\nYou can switch off roaming restriction in Settings by enabling \"Enable cellular roaming\".</string>
+    <string name="service_unavailable">Service unavailable.\nPlease contact support or wait</string>
+    <string name="dont_show_again">Do not show again</string>
+    <string name="add_to_auto_start">Add Pvtbox to auto start</string>
+    <string name="add_to_auto_start_description">It is recommended to enable Pvtbox auto start in system settings</string>
+    <string name="exit">Exit</string>
+    <string name="app_version">Pvtbox %s</string>
+    <string name="status_details">Network:\n%s\n\nSyncing local \\ Indexing:\n%s\n\nSyncing remote:\n%s\n\nDownloading:\n%s\n\n</string>
+    <string name="done">done</string>
+    <string name="files_total">%d files total…</string>
+    <string name="download_status">%s\n%d files total…</string>
+    <string name="fetching_changes">fetching changes…</string>
+    <string name="manage">(manage…)</string>
+    <string name="details">Details…</string>
+    <string name="automatic_download">Automatically download\u0020</string>
+    <string name="media_less_than_10mb"><![CDATA[media files < 10MB]]></string>
+    <string name="send_statistic">Send anonymous data\u0020</string>
+    <string name="to_improve_service">to improve service\u0020\u0020\u0020</string>
+    <string name="filename_too_long">Filename too long</string>
+    <string name="object_was_deleted">Object was deleted</string>
+    <string name="please_select_subject">Please select subject</string>
+    <string name="will_download_to">Selection will be downloaded to %s</string>
+    <string-array name="support_subjects">
+        <item>---Select Subject---</item>
+        <item>Technical Question</item>
+        <item>Other Question</item>
+        <item>Feedback</item>
+    </string-array>
+
+    <!--applock-->
+    <string name="pinlock_title">Enter your passcode</string>
+    <string name="pinlock_settitle">Create your passcode</string>
+    <string name="pinlock_secondPin">Confirm your passcode</string>
+    <string name="pinlock_wrongpin">Wrong passcode</string>
+    <string name="pinlock_tryagain">Passcodes are not the same, create your passcode again</string>
+    <string name="pinlock_fingerprint">Use Fingerprint</string>
+    <string name="ask_set_passcode_title">Protect your privacy with passcode</string>
+    <string name="ask_set_passcode_message">Tap \'SET PASSCODE\' to create it now or You can create passcode later via settings</string>
+    <string name="set_passcode">SET PASSCODE</string>
+    <string name="no_thanks">NO, THANKS</string>
+    <string name="peer_connected">1 peer connected</string>
+    <string name="peers_connected_format">%d peers connected</string>
+    <string name="network_speed_status_format">%.1f %s | %.1f %s</string>
+    <string name="initial_network_download_status">0.0 KB/s | 0.0 B</string>
+    <string name="initial_network_peers_status">0 peers connected</string>
+    <string name="initial_network_upload_status">0.0 KB/s | 0.0 B</string>
+    <string name="add_to_pvtbox">Add to Pvtbox</string>
+    <string name="send_via_pvtbox">Send via Pvtbox</string>
+    <string name="next">next</string>
+    <string name="skip">skip</string>
+    <string name="slide_1_title">Build private cloud</string>
+    <string name="slide_1_desc">Your files on all your devices</string>
+    <string name="slide_2_title">Security</string>
+    <string name="slide_2_desc">No public cloud.\nDirect file transfers across devices</string>
+    <string name="slide_3_title">Unlimited</string>
+    <string name="slide_3_desc">File size and transfer speed</string>
+    <string name="got_it">got it</string>
+    <string name="cancel_download">Cancel Download</string>
+    <string name="cancel_downloads">Cancel Downloads</string>
+    <string name="resumed_downloads">Resumed downloads</string>
+    <string name="paused_downlaods">Paused downloads</string>
+    <string name="emulator_prohibited">Running app in emulator or under debugger is prohibited</string>
+    <string name="ip_locked_template">Your ip is locked now, you can repeat operation in %d sec</string>
+    <string name="ip_unlocked">Your ip was unblocked, you can repeat operation now</string>
+    <string name="insert_share_link">Insert share link</string>
+    <string name="empty_link_error">Please insert share link</string>
+    <string name="locked_after_too_many_incorrect_attempts">Locked after too many incorrect attempts</string>
+    <string name="wrong_password">Wrong password</string>
+    <string name="invalid_link">Invalid link</string>
+    <string name="tap_to_download">Tap to download</string>
+    <string name="import_camera">Import camera</string>
+    <string name="not_available_for_free_license">Not available for free license</string>
+    <string name="remove_node">Remove node</string>
+    <string name="are_you_sure">Are you sure?</string>
+    <string name="all_files_will_be_wiped">All files from \"%s\" node\'s Pvtbox secured sync folder will be wiped.</string>
+    <string name="remove_node_message">\"%s\" node will be removed from list of devices. Files will not be wiped.</string>
+    <string name="removing_node">Removing node…</string>
+    <string name="removed_node">Successfully removed node</string>
+    <string name="password_length_big_error">Password can\'t contain more than 32 symbols</string>
+    <string name="sending_remote_action">Sending remote action…</string>
+    <string name="remote_action_sent">Remote action sent successfully</string>
+    <string name="no_records_found">No records found.</string>
+    <string name="notifications">Notifications</string>
+    <string name="accepting_invitation">Accepting invitation…</string>
+    <string name="accepted_invitation">Invitation accepted successfully</string>
+    <string name="self_hosted_user">I\'m self-hosted user</string>
+    <string name="regular_user">I\'m regular user</string>
+    <string name="your_self_hosted_server_address">Your self-hosted server address</string>
+    <string name="connect_more_devices">Connect more devices to sync</string>
+    <string name="content_description_logo">logo</string>
+    <string name="content_description_exit">exit</string>
+    <string name="content_description_image">image</string>
+    <string name="content_description_send">send</string>
+    <string name="content_description_create_folder">create folder</string>
+    <string name="content_description_add_photo">add photo</string>
+    <string name="content_description_take_photo">take photo</string>
+    <string name="content_description_add_files">add files</string>
+    <string name="content_description_import_camera">import camera</string>
+    <string name="content_description_insert_link">insert link</string>
+    <string name="content_description_download_speed">download speed</string>
+    <string name="content_description_upload_speed">upload speed</string>
+    <string name="content_description_icon">icon</string>
+    <string name="content_description_close">close</string>
+    <string name="content_description_collaborator">collaborator</string>
+    <string name="content_description_quit">quit</string>
+    <string name="content_description_delete">delete</string>
+    <string name="content_description_device">device</string>
+    <string name="content_description_online">online</string>
+    <string name="content_description_os">OS</string>
+    <string name="content_description_get_link">get link</string>
+    <string name="content_description_menu">menu</string>
+    <string name="content_description_open_with">open with…</string>
+    <string name="content_description_share">share</string>
+    <string name="content_description_offline">offline</string>
+    <string name="content_description_download_to">download to…</string>
+    <string name="content_description_copy">copy</string>
+    <string name="content_description_move">move</string>
+    <string name="content_description_rename">rename</string>
+    <string name="content_description_properties">properties</string>
+    <string name="content_description_cancel" tools:ignore="ButtonCase">cancel</string>
+    <string name="content_description_remove">remove</string>
+    <string name="content_description_sync">sync</string>
+    <string name="content_description_security">security</string>
+    <string name="content_description_unlimited">unlimited</string>
+    <string name="content_description_details">details</string>
+    <string name="content_description_logout">logout</string>
+    <string name="content_description_wipe">wipe</string>
+    <string name="content_description_select_all">select_all</string>
+    <string name="content_description_info">info</string>
+    <string name="content_description_collaborate">collaborate</string>
+    <string name="content_description_is_downloaded">is downloaded</string>
+
+
+</resources>

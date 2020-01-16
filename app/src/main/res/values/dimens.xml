@@ -1,0 +1,65 @@
+<!--
+  
+  Pvtbox. Fast and secure file transfer & sync directly across your devices. 
+  Copyright © 2020  Pb Private Cloud Solutions Ltd. 
+  
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+     http://www.apache.org/licenses/LICENSE-2.0
+  
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  
+-->
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <!-- Default screen margins, per the Android Design guidelines. -->
+
+    <!-- List Item -->
+
+    <!-- Chooser Fragment -->
+    <dimen name="margin_image_viewer_item">8dp</dimen>
+    <dimen name="setting_height_item">64dp</dimen>
+
+
+    <dimen name="design_fab_image_size" tools:override="true">16dp</dimen>
+    <dimen name="empty_view_text_size">20sp</dimen>
+    <dimen name="tool_bar_height">54dp</dimen>
+    <dimen name="height_file_item">74dp</dimen>
+    <dimen name="height_file_card">74dp</dimen>
+
+    <!-- applock -->
+    <dimen name="default_delete_button_size_width">39dp</dimen>
+    <dimen name="default_delete_button_size_height">27dp</dimen>
+    <dimen name="default_horizontal_spacing">40dp</dimen>
+    <dimen name="default_vertical_spacing">0dp</dimen>
+
+    <dimen name="default_text_size">16sp</dimen>
+    <dimen name="default_button_size">64dp</dimen>
+
+    <dimen name="dot_diameter">12dp</dimen>
+    <dimen name="dot_spacing">8dp</dimen>
+    <dimen name="dot_margintop">8dp</dimen>
+
+    <dimen name="attempts_margintop">8dp</dimen>
+
+    <dimen name="lockview_margin">8dp</dimen>
+
+    <dimen name="layout_padding">4dp</dimen>
+
+    <dimen name="textsize_title">16sp</dimen>
+    <dimen name="title_margintop">12dp</dimen>
+
+    <dimen name="delete_radius">6dp</dimen>
+
+    <dimen name="dot_border">1dp</dimen>
+
+    <dimen name="finger_text_marginbottom">4dp</dimen>
+    <dimen name="finger_icon">48dp</dimen>
+    <dimen name="finger_icon_marginbottom">0dp</dimen>
+
+</resources>

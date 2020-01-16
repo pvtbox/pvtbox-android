@@ -1,0 +1,50 @@
+<!--
+  
+  Pvtbox. Fast and secure file transfer & sync directly across your devices. 
+  Copyright © 2020  Pb Private Cloud Solutions Ltd. 
+  
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+     http://www.apache.org/licenses/LICENSE-2.0
+  
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  
+-->
+<resources>
+
+    <style name="AppTheme.PBBaseImplv21" parent="AppTheme.PBBaseImpl">
+        <item name="android:colorButtonNormal">@color/primary</item>
+        <item name="android:checkboxStyle">@style/pbCheckBoxStyle</item>
+    </style>
+    <style name="AppTheme.PBBase" parent="AppTheme.PBBaseImplv21"/>
+
+    <style name="AppTheme.PBNoActionBarImplv21" parent="AppTheme.PBNoActionBarImpl">
+        <item name="android:colorButtonNormal">@color/primary</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="AppTheme.PBNoActionBar" parent="AppTheme.PBNoActionBarImplv21"/>
+
+    <style name="pbRadioButStyleImplv21" parent="pbRadioButStyleImpl">
+        <item name="android:buttonTint">@drawable/def_elems_color_selector</item>
+    </style>
+    <style name="pbRadioButStyle" parent="pbRadioButStyleImplv21"/>
+
+    <style name="pbCheckBoxStyle" parent="Base.Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:buttonTint">@drawable/def_elems_color_selector</item>
+    </style>
+
+    <style name="Permissions.TransparentTheme" parent="@android:style/Theme.Material.Light.Dialog">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+</resources>

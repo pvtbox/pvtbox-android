@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  
+  Pvtbox. Fast and secure file transfer & sync directly across your devices. 
+  Copyright © 2020  Pb Private Cloud Solutions Ltd. 
+  
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+     http://www.apache.org/licenses/LICENSE-2.0
+  
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/setting_height_item"
+                android:paddingStart="8dp">
+
+                <ImageView
+                    android:id="@+id/setting_user_icon_image_view"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="8dp"
+                    android:src="@drawable/add_photo"
+                    android:visibility="gone"
+                    android:contentDescription="@string/content_description_logo" />
+
+                <TextView
+                    android:id="@+id/setting_mail_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/setting_user_icon_image_view"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:paddingStart="16dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/setting_height_item"
+                android:background="@color/dark_string"
+                android:paddingEnd="8dp"
+                android:paddingStart="8dp">
+
+                <TextView
+                    android:id="@+id/account_type_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="8dp"
+                    android:text="@string/account_type" />
+
+                <TextView
+                    android:id="@+id/account_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="8dp"
+                    android:layout_toEndOf="@+id/account_type_text"
+                    android:textColor="@color/aluminum" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="8dp"
+                    android:text="@string/update_to_pro"
+                    android:textColor="@color/primary"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/setting_height_item"
+                android:paddingEnd="8dp"
+                android:paddingStart="8dp">
+
+                <org.apmem.tools.layouts.FlowLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/automatic_upload" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="24dp"
+                        android:text="@string/photos_from_camera" />
+                </org.apmem.tools.layouts.FlowLayout>
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/setting_automatic_camera_upload_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="4dp"
+                    android:theme="@style/SCBSwitch" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/setting_height_item"
+                android:background="@color/dark_string"
+                android:paddingEnd="8dp"
+                android:paddingStart="8dp">
+
+                <org.apmem.tools.layouts.FlowLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/automatic_download" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="24dp"
+                        android:text="@string/media_less_than_10mb" />
+                </org.apmem.tools.layouts.FlowLayout>
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/setting_download_media_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="4dp"
+                    android:theme="@style/SCBSwitch" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/setting_height_item"
+                android:paddingEnd="8dp"
+                android:paddingStart="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="8dp"
+                    android:text="@string/add_to_auto_start" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/setting_autostart_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="4dp"
+                    android:theme="@style/SCBSwitch" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/setting_height_item"
+                android:background="@color/dark_string"
+                android:paddingEnd="8dp"
+                android:paddingStart="8dp">
+
+                <org.apmem.tools.layouts.FlowLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/send_statistic" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="24dp"
+                        android:text="@string/to_improve_service" />
+                </org.apmem.tools.layouts.FlowLayout>
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/setting_statistic_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="4dp"
+                    android:theme="@style/SCBSwitch" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/setting_height_item"
+                android:paddingEnd="8dp"
+                android:paddingStart="8dp">
+
+                <org.apmem.tools.layouts.FlowLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/protect_your_privacy" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="24dp"
+                        android:text="@string/with_passcode" />
+                </org.apmem.tools.layouts.FlowLayout>
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/setting_passcode_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="4dp"
+                    android:theme="@style/SCBSwitch" />
+
+            </RelativeLayout>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/dark_string"
+                android:paddingStart="8dp">
+
+                <RadioButton
+                    android:id="@+id/setting_wifi_only_radio_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:checked="true"
+                    android:text="@string/wifi_only" />
+
+                <RadioButton
+                    android:id="@+id/setting_wifi_end_cellular_radio_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="@string/wifi_and_cellular" />
+            </RadioGroup>
+
+            <RelativeLayout
+                android:id="@+id/roaming_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:background="@color/dark_string"
+                android:paddingEnd="8dp"
+                android:paddingStart="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="40dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/enable_roaming" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/setting_roaming_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="4dp"
+                    android:theme="@style/SCBSwitch" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="0dp"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp">
+
+        <TextView
+            android:id="@+id/version_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/aluminum" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/logout_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="@string/logout" />
+
+    </LinearLayout>
+</RelativeLayout>

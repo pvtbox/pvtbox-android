@@ -1,0 +1,182 @@
+<!--
+  
+  Pvtbox. Fast and secure file transfer & sync directly across your devices. 
+  Copyright © 2020  Pb Private Cloud Solutions Ltd. 
+  
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+     http://www.apache.org/licenses/LICENSE-2.0
+  
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  
+-->
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:background">@color/transparent</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:colorBackground">@color/transparent</item>
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/black</item>
+        <item name="actionOverflowMenuStyle">@style/OverflowMenu</item>
+        <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>
+    </style>
+
+    <style name="WindowAnimationTransition">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+        <item name="android:windowHideAnimation">@null</item>
+        <item name="android:windowShowAnimation">@null</item>
+    </style>
+
+    <style name="AppTheme.PBBaseImpl" parent="Theme.AppCompat.NoActionBar">
+        <!-- <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>-->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/black</item>
+
+        <item name="android:textColor">@color/monsoon</item>
+        <item name="colorControlNormal">@color/non_selected_elements</item>
+        <item name="colorControlActivated">@color/primary</item>
+        <item name="colorControlHighlight">@color/primary_dark</item>
+        <item name="android:textColorHint">@color/jumbo</item>
+
+        <item name="colorButtonNormal">@color/primary</item>
+
+        <item name="android:editTextColor">@color/black</item>
+        <item name="android:editTextStyle">@style/pbEditTextStyle</item>
+        <item name="android:radioButtonStyle">@style/pbRadioButStyle</item>>
+        <item name="android:buttonStyle">@style/pbButtonStyle</item>
+        <item name="android:textViewStyle">@style/pbTextViewStyle</item>
+        <item name="actionOverflowMenuStyle">@style/OverflowMenu</item>
+        <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>
+        <item name="android:colorBackground">@color/transparent</item>
+        <item name="android:windowBackground">@color/accent</item>
+    </style>
+
+    <style name="AppTheme.PBBase" parent="AppTheme.PBBaseImpl" />
+
+    <style name="AppTheme.PBNoActionBarImpl" parent="AppTheme.PBBase">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="actionOverflowMenuStyle">@style/OverflowMenu</item>
+    </style>
+
+    <style name="AppTheme.Launcher">
+        <item name="android:windowBackground">@drawable/launch_screen</item>
+    </style>
+    <style name="AppTheme.PBNoActionBar" parent="AppTheme.PBNoActionBarImpl" />
+
+    <style name="pbRadioButStyleImpl" parent="@style/Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:textColor">@color/monsoon</item>
+
+    </style>
+
+    <style name="pbRadioButStyle" parent="pbRadioButStyleImpl" />
+
+    <style name="pbEditTextStyle" parent="@style/Widget.AppCompat.EditText">
+        <item name="android:textColorHint">@drawable/def_elems_color_selector</item>>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="pbButtonStyle" parent="Base.Widget.AppCompat.Button">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="pbTextViewStyle" parent="android:Widget.TextView">
+        <item name="android:textColorLink">@color/primary</item>
+    </style>
+
+    <style name="searchViewStyle" parent="Widget.AppCompat.Light.SearchView">
+        <item name="android:editTextColor">@color/white</item>
+        <item name="android:textColorHint">@color/base</item>
+
+    </style>
+
+
+    <style name="pbNavigationDrawerStyle" parent="Widget.Design.NavigationView">
+        <item name="android:textColorPrimary">@color/jet</item>
+        <item name="android:textColorSecondary">@color/primary</item>
+        <item name="itemIconTint">@drawable/def_elems_color_selector</item>
+        <item name="android:listDivider">@color/jumbo</item>
+        <item name="colorControlNormal">@color/white</item>
+        <item name="colorControlActivated">@color/white</item>
+        <item name="colorControlHighlight">@color/white</item>
+    </style>
+
+    <style name="SCBSwitch" parent="Theme.AppCompat.Light">
+        <!-- active thumb & track color (30% transparency) -->
+        <item name="colorControlActivated">@color/primary</item>
+
+        <!-- inactive thumb color -->
+        <item name="colorSwitchThumbNormal">@color/white
+        </item>
+
+        <!-- inactive track color (30% transparency) -->
+        <item name="android:colorForeground">#42221f1f
+        </item>
+    </style>
+
+
+    <style name="AppTheme.Dark.DialogWhite" parent="Theme.AppCompat.Dialog">
+        <item name="colorAccent">@color/black</item>
+        <item name="color">@color/black</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="android:colorButtonNormal" tools:targetApi="lollipop">@color/black</item>
+        <item name="android:background">@color/back_ground_dialog</item>
+        <item name="android:tint">@color/primary</item>
+        <item name="android:windowNoTitle">false</item>
+    </style>
+
+
+    <style name="DialogWhite" parent="Theme.AppCompat.Dialog">
+        <item name="colorAccent">@color/black</item>
+        <item name="color">@color/black</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="android:colorButtonNormal" tools:targetApi="lollipop">@color/black</item>
+        <item name="android:background">@color/back_ground_dialog</item>
+        <item name="android:windowNoTitle">false</item>
+    </style>
+
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="android:textColorSecondary">@color/black</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="file_property_text_view">
+        <item name="android:layout_margin">@dimen/margin_image_viewer_item</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_alignParentStart" tools:targetApi="jelly_bean_mr1">true</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="image_viewer_text_view_data">
+        <item name="android:layout_margin">@dimen/margin_image_viewer_item</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:lines">1</item>
+        <item name="android:layout_alignParentEnd" tools:targetApi="jelly_bean_mr1">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="OverflowMenu" parent="Widget.AppCompat.PopupMenu.Overflow">
+        <item name="android:overlapAnchor">false</item>
+        <item name="android:actionMenuTextColor">@color/black</item>
+        <item name="android:dropDownVerticalOffset">8dp</item>
+    </style>
+
+</resources>

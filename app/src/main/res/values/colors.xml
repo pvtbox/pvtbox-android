@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  
+  Pvtbox. Fast and secure file transfer & sync directly across your devices. 
+  Copyright © 2020  Pb Private Cloud Solutions Ltd. 
+  
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+     http://www.apache.org/licenses/LICENSE-2.0
+  
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  
+-->
+<resources>
+    <color name="black">#000000</color>
+    <color name="jet">#222222</color>
+    <color name="oil">#333333</color>
+    <color name="monsoon">#777777</color>
+    <color name="monsoon_transparent">#99777777</color>
+    <color name="monsoon_light">#aaaaaa</color>
+    <color name="dots_color">#99aeaeae</color>
+    <color name="jumbo">#888888</color>
+    <color name="aluminum">#999999</color>
+    <color name="base">#AAAAAA</color>
+    <color name="iron">#F3F3F3</color>
+    <color name="dark_string">#ECECEC</color>
+    <color name="white">#FFFFFF</color>
+    <color name="back_ground_dialog">#efebeb</color>
+
+    <color name="transparent">#00000000</color>
+
+    <color name="non_selected_elements">#dddddd</color>
+    <color name="primary">#FC914D</color>
+    <color name="toolbar_color">@color/jet</color>
+    <color name="dark_orange">#DE5702</color>
+
+    <color name="primary_dark">#EE8641</color>
+    <color name="primary_darker">#EB7424</color>
+
+    <color name="accent">#ffffff</color>
+    <color name="green">#01AB33</color>
+    <color name="red">#e50000</color>
+    <color name="background_color_property_file" >@color/dark_string</color>
+    <color name="grey">#dddddd</color>
+    <color name="file_color">@color/monsoon_light</color>
+
+
+</resources>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  
+  Pvtbox. Fast and secure file transfer & sync directly across your devices. 
+  Copyright © 2020  Pb Private Cloud Solutions Ltd. 
+  
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+     http://www.apache.org/licenses/LICENSE-2.0
+  
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="net.pvtbox.android">
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:node="replace" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <application
+        android:name="net.pvtbox.android.application.App"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.PBBase"
+        tools:replace="android:theme,android:allowBackup"
+        android:networkSecurityConfig="@xml/network_security_config"
+        tools:ignore="UnusedAttribute">
+
+        <activity
+            android:name=".ui.main_screen.MainActivity"
+            android:launchMode="singleTask"
+            android:alwaysRetainTaskState="true"/>
+
+        <activity
+            android:name=".ui.ShowFragmentActivity"
+            android:launchMode="singleTask"
+            android:alwaysRetainTaskState="true"/>
+
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:alwaysRetainTaskState="true"
+            android:launchMode="singleTask"
+            android:maxRecents="1"
+            android:theme="@style/AppTheme.PBNoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name=".ui.imageviewer.PropertyViewerActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:maxRecents="1"
+            android:theme="@style/AppTheme.PBBase" />
+        <activity
+            android:name=".ui.start.StartActivity"
+            android:alwaysRetainTaskState="true"
+            android:launchMode="singleTask"
+            android:maxRecents="1"
+            android:theme="@style/AppTheme.Launcher"
+            tools:targetApi="lollipop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="pvtbox" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.start.AddToPvtboxActivity"
+            android:alwaysRetainTaskState="true"
+            android:label="@string/add_to_pvtbox"
+            android:launchMode="singleTask"
+            android:maxRecents="1"
+            android:theme="@style/AppTheme.Launcher"
+            tools:targetApi="lollipop">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="*/*" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.SEND_MULTIPLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="*/*" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.start.SendViaPvtboxActivity"
+            android:alwaysRetainTaskState="true"
+            android:label="@string/send_via_pvtbox"
+            android:launchMode="singleTask"
+            android:maxRecents="1"
+            android:theme="@style/AppTheme.Launcher"
+            tools:targetApi="lollipop">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="*/*" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND_MULTIPLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="*/*" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.start.IntroActivity"
+            android:alwaysRetainTaskState="true"
+            android:launchMode="singleTask"
+            android:maxRecents="1"
+            android:theme="@style/AppTheme.PBNoActionBar"
+            tools:targetApi="lollipop">
+        </activity>
+
+        <receiver
+            android:name="net.pvtbox.android.service.BootCompletedIntentReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="net.pvtbox.android.service.PvtboxService"
+            android:description="@string/service_description"
+            android:exported="false"
+            android:label="@string/app_name" />
+
+        <activity
+            android:name="com.nabinbhandari.android.permissions.PermissionsActivity"
+            android:launchMode="singleTask"
+            android:alwaysRetainTaskState="true"
+            android:theme="@style/Permissions.TransparentTheme" />
+
+        <activity
+            android:name="com.amirarcane.lockscreen.activity.EnterPinActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"/>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+    </application>
+
+
+</manifest>
