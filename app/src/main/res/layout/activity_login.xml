@@ -204,7 +204,6 @@
                 android:layout_gravity="end"
                 android:text="@string/self_hosted_user"
                 android:layout_margin="8dp"
-                android:visibility="invisible"
                 android:textSize="14sp" />
 
             <LinearLayout

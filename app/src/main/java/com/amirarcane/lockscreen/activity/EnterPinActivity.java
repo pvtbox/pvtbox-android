@@ -395,7 +395,7 @@ public class EnterPinActivity extends AppCompatActivity {
         // or higher before executing any fingerprint-related code
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             FingerprintManager fingerprintManager = (FingerprintManager) getSystemService(Context.FINGERPRINT_SERVICE);
-            if (Objects.requireNonNull(fingerprintManager).isHardwareDetected()) {
+            if (fingerprintManager != null && fingerprintManager.isHardwareDetected()) {
                 //Get an instance of KeyguardManager and FingerprintManager//
                 KeyguardManager mKeyguardManager = (KeyguardManager) getSystemService(KEYGUARD_SERVICE);
                 FingerprintManager mFingerprintManager = (FingerprintManager) getSystemService(FINGERPRINT_SERVICE);
@@ -406,7 +406,7 @@ public class EnterPinActivity extends AppCompatActivity {
                     // If your app doesn't have this permission, then display the following text//
 //                Toast.makeText(EnterPinActivity.this, "Please enable the fingerprint permission", Toast.LENGTH_LONG).show();
                     mImageViewFingerView.setVisibility(View.GONE);
-//                    mTextFingerText.setVisibility(View.GONE);
+                    mTextFingerText.setVisibility(View.GONE);
                     return;
                 }
 
@@ -417,7 +417,7 @@ public class EnterPinActivity extends AppCompatActivity {
 //                        "No fingerprint configured. Please register at least one fingerprint in your device's Settings",
 //                        Toast.LENGTH_LONG).show();
                     mImageViewFingerView.setVisibility(View.GONE);
-//                    mTextFingerText.setVisibility(View.GONE);
+                    mTextFingerText.setVisibility(View.GONE);
                     return;
                 }
 
@@ -426,7 +426,7 @@ public class EnterPinActivity extends AppCompatActivity {
                     // If the user hasn’t secured their lockscreen with a PIN password or pattern, then display the following text//
 //                Toast.makeText(EnterPinActivity.this, "Please enable lockscreen security in your device's Settings", Toast.LENGTH_LONG).show();
                     mImageViewFingerView.setVisibility(View.GONE);
-//                    mTextFingerText.setVisibility(View.GONE);
+                    mTextFingerText.setVisibility(View.GONE);
                 } else {
                     try {
                         generateKey();
@@ -446,11 +446,11 @@ public class EnterPinActivity extends AppCompatActivity {
                 }
             } else {
                 mImageViewFingerView.setVisibility(View.GONE);
-//                mTextFingerText.setVisibility(View.GONE);
+                mTextFingerText.setVisibility(View.GONE);
             }
         } else {
             mImageViewFingerView.setVisibility(View.GONE);
-//            mTextFingerText.setVisibility(View.GONE);
+            mTextFingerText.setVisibility(View.GONE);
         }
     }
 

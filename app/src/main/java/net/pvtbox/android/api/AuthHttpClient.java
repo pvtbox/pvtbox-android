@@ -19,6 +19,7 @@ import java.io.IOException;
 import java.util.Objects;
 
 import okhttp3.Call;
+import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 import okhttp3.ResponseBody;
@@ -301,7 +302,8 @@ public class AuthHttpClient extends HttpClient {
                     .url(url)
                     .get()
                     .build();
-            client.newCall(request).enqueue(new okhttp3.Callback() {
+            OkHttpClient cli = url.contains("pvtbox.net") ? pvtboxClient : client;
+            cli.newCall(request).enqueue(new okhttp3.Callback() {
                 @Override
                 public void onFailure(@NotNull Call call, @NotNull IOException e) {
                     onError.call(context.getString(R.string.network_error));

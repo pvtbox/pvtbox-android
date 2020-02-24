@@ -111,6 +111,7 @@ public class HttpClient {
     Handler requestsHandler;
 
     static private TrustKit kit;
+    static OkHttpClient pvtboxClient;
     static OkHttpClient client;
 
     final PreferenceService preferenceService;
@@ -140,10 +141,14 @@ public class HttpClient {
             }
             requestsHandler = new Handler(requestsThread.getLooper());
 
-            client = new OkHttpClient.Builder()
+            pvtboxClient = new OkHttpClient.Builder()
                     .sslSocketFactory(
                             kit.getSSLSocketFactory("pvtbox.net"),
                             kit.getTrustManager("pvtbox.net"))
+                    .callTimeout(20, TimeUnit.SECONDS)
+                    .connectTimeout(10, TimeUnit.SECONDS)
+                    .build();
+            client = new OkHttpClient.Builder()
                     .callTimeout(20, TimeUnit.SECONDS)
                     .connectTimeout(10, TimeUnit.SECONDS)
                     .build();
@@ -343,7 +348,8 @@ public class HttpClient {
             @Nullable SuccessResposeHandler onSuccess,
             @Nullable ErrorResponseHandler onError,
             int retryCount, Request request) {
-        client.newCall(request).enqueue(new okhttp3.Callback() {
+        OkHttpClient cli = request.url().host().contains("pvtbox.net") ? pvtboxClient : client;
+        cli.newCall(request).enqueue(new okhttp3.Callback() {
             @Override
             public void onFailure(@NotNull Call call, @NotNull IOException e) {
                 if (retryCount > 3) {
@@ -409,13 +415,14 @@ public class HttpClient {
             @Nullable ErrorResponseHandler onError,
             @NonNull DataResponseHandler onData,
             int retryCount, Request request) {
-        OkHttpClient streamClient = new OkHttpClient.Builder()
-                .sslSocketFactory(
-                        kit.getSSLSocketFactory("pvtbox.net"),
-                        kit.getTrustManager("pvtbox.net"))
-                .connectTimeout(30, TimeUnit.SECONDS)
-                .build();
-        streamClient.newCall(request).enqueue(new okhttp3.Callback() {
+        OkHttpClient.Builder streamClientBuilder = new OkHttpClient.Builder()
+                .connectTimeout(30, TimeUnit.SECONDS);
+        if (request.url().host().contains("pvtbox.net")) {
+                streamClientBuilder.sslSocketFactory(
+                    kit.getSSLSocketFactory("pvtbox.net"),
+                    kit.getTrustManager("pvtbox.net"));
+        }
+        streamClientBuilder.build().newCall(request).enqueue(new okhttp3.Callback() {
             @Override
             public void onFailure(@NotNull Call call, @NotNull IOException e) {
                 if (retryCount > 3) {

@@ -237,6 +237,9 @@ public class LoginActivity extends BaseActivity {
         String password = Objects.requireNonNull(Objects.requireNonNull(passwordTxt).getText()).toString();
         String passwordConfirm = Objects.requireNonNull(Objects.requireNonNull(passwordConfirmTxt).getText()).toString();
         String host = Objects.requireNonNull(Objects.requireNonNull(hostTxt).getText()).toString().trim().toLowerCase();
+        if (!host.isEmpty() && !host.startsWith("https://")) {
+            host = "https://" + host;
+        }
         if (!validate(mail, password, host)) {
             return;
         }
@@ -502,6 +505,15 @@ public class LoginActivity extends BaseActivity {
 
     private void remindPassword() {
         String mail = Objects.requireNonNull(Objects.requireNonNull(emailTxt).getText()).toString().trim().toLowerCase();
+        String host = Objects.requireNonNull(Objects.requireNonNull(hostTxt).getText()).toString().trim().toLowerCase();
+        if (showingHost && !host.isEmpty() && !host.startsWith("https://")) {
+            host = "https://" + host;
+        }
+        if (showingHost) {
+            preferenceService.setHost(host);
+        } else {
+            preferenceService.setHost(Const.BASE_URL);
+        }
         if (!EmailValidator.isValid(mail)) {
             showErrorMail(getBaseContext().getString(R.string.wrong_email_format));
             return;

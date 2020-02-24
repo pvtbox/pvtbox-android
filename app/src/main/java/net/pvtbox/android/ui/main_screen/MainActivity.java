@@ -57,6 +57,7 @@ import net.pvtbox.android.application.Const;
 import net.pvtbox.android.db.DataBaseService;
 import net.pvtbox.android.db.model.DeviceRealm;
 import net.pvtbox.android.db.model.FileRealm;
+import net.pvtbox.android.service.PreferenceService;
 import net.pvtbox.android.service.PvtboxService;
 import net.pvtbox.android.service.signalserver.SignalServerService;
 import net.pvtbox.android.sharedirectorychooser.ChooseDirectoryDialog;
@@ -1031,7 +1032,7 @@ public class MainActivity extends BaseActivity
             insertLinkDialogText.setError(getString(R.string.invalid_link));
             return;
         }
-        if (!shareDataList[2].equals("pvtbox.net")) {
+        if (!preferenceService.getHost().contains(shareDataList[2])) {
             insertLinkDialogText.setError(getString(R.string.invalid_link));
             return;
         }

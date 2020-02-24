@@ -116,16 +116,18 @@ public abstract class SignalServerClient implements WebSocketListener {
         this.preferenceService = preferenceService;
         this.dataBaseService = dataBaseService;
 
-        TrustKit kit;
-        try {
-            kit = TrustKit.initializeWithNetworkSecurityConfiguration(context);
-        } catch (Exception e) {
-            kit = TrustKit.getInstance();
-        }
-        SSLSocketFactory socketFactory = kit.getSSLSocketFactory("pvtbox.net");
         factory = new WebSocketFactory();
-        factory.setSSLSocketFactory(socketFactory);
         factory.setConnectionTimeout(CONNECT_TIMEOUT);
+        if (!preferenceService.isSelfHosted()) {
+            TrustKit kit;
+            try {
+                kit = TrustKit.initializeWithNetworkSecurityConfiguration(context);
+            } catch (Exception e) {
+                kit = TrustKit.getInstance();
+            }
+            SSLSocketFactory socketFactory = kit.getSSLSocketFactory("pvtbox.net");
+            factory.setSSLSocketFactory(socketFactory);
+        }
     }
 
     void onDestroy() {
